@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/d3.wav-ffdedd03a26b2401ddbfd3de15926a6d.sample"
+
+[deps]
+
+source_file="res://audio/d3.wav"
+dest_files=[ "res://.import/d3.wav-ffdedd03a26b2401ddbfd3de15926a6d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

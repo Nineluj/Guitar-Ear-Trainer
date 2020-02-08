@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/g7.wav-95209ac987384ee6113db01dc8ff846a.sample"
+
+[deps]
+
+source_file="res://audio/g7.wav"
+dest_files=[ "res://.import/g7.wav-95209ac987384ee6113db01dc8ff846a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/d9.wav-1c7ada41410e6e487c185d810819966d.sample"
+
+[deps]
+
+source_file="res://audio/d9.wav"
+dest_files=[ "res://.import/d9.wav-1c7ada41410e6e487c185d810819966d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

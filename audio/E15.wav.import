@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/E15.wav-9a7123ade68537bb18aa944248e85a5f.sample"
+
+[deps]
+
+source_file="res://audio/E15.wav"
+dest_files=[ "res://.import/E15.wav-9a7123ade68537bb18aa944248e85a5f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

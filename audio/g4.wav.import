@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/g4.wav-294aa1e9d6f11254e76ba496e6c5f793.sample"
+
+[deps]
+
+source_file="res://audio/g4.wav"
+dest_files=[ "res://.import/g4.wav-294aa1e9d6f11254e76ba496e6c5f793.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
