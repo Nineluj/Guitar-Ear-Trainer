@@ -2,8 +2,16 @@ extends Node2D
 
 var songs = [
 [],
-["E0", "E2", "E4", "E5", "E7"],
-[
+[ # 7 nation army
+	"a7", "a7", "a10", "a7", "a5", "a3", "", "a2"
+],
+[ # smoke on the water
+	"E0", "E3", "E5", "",
+	"E0", "E3", "E6", "E5", "",
+	"E0", "E3", "E5", "",
+	"E3", "E0", "E0"
+],
+[ # frere jacques
 	"g0", "g2", "g4", "g0", "", "g0", "g2", "g4", "g0", "g4", "g5", "g7", "g4",
 	"g5", "g7", "",
 	"b3", "b5", "b3", "b1", "b0", "g0", "b3", "b5", "b3", "b1", "b0", "g0",
@@ -80,9 +88,15 @@ func _ready():
 			if n != "":
 				currentSong.append(n)
 	else:
-		for _i in range(10):
-			currentSong.append(notesArr[randi() % len(notesArr)]
-			+ str(randi() % 13))
+		for i in range(10):
+			var nn = notesArr[randi() % len(notesArr)] + str(randi() % 13)
+			
+			if i > 0:
+				while sameNotes(nn, currentSong[i - 1]):
+					nn = notesArr[randi() % len(notesArr)] + str(randi() % 13)
+			
+			currentSong.append(nn)
+			
 	
 	playRound()
 	
@@ -114,4 +128,11 @@ func checkNext(nn):
 
 func displayComplete():
 	get_node("EndScreen").visible = true
-	guitar.playSong(currentSong)
+	
+	var doubledSong = []
+	
+	for _i in range(2):
+		for n in currentSong:
+			doubledSong.append(n) 
+		doubledSong.append("")
+	guitar.playSong(doubledSong)
