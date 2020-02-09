@@ -18,6 +18,57 @@ var scoreboard = null
 
 var notesArr = ["E", "a", "d", "g", "b", "he"]
 
+func transposeDown(n):
+	if n[0] == "he":
+		return ["", -1]
+	
+	var n_index = notesArr.find(n[0])
+	
+	if n[0] == "g":
+		return [notesArr[n_index + 1], n[1] - 4]
+	else:
+		return [notesArr[n_index + 1], n[1] - 5]
+		
+
+func splitUp(n: String):
+	if n.begins_with("he"):
+		return [n.left(2), int(n.right(2))]
+	else:
+		return [n.left(1), int(n.right(1))]
+
+func sameNotes(a: String, b: String):
+	print(a, b)
+	if a == b:
+		return true
+	
+	var asp = splitUp(a)
+	var bsp = splitUp(b)
+	
+	return sameNotesRecc(asp, bsp)
+
+func sameNotesRecc(asp, bsp):
+	if asp[0] == bsp[0]:
+		return int(abs(asp[1] - bsp[1])) % 12 == 0
+	
+	var asp_index = notesArr.find(asp[0])
+	var bsp_index = notesArr.find(bsp[0])
+	
+	if asp_index < bsp_index:
+		var a_down = transposeDown(asp)
+		
+		if a_down[1] < 0:
+			return false
+		
+		return sameNotesRecc(a_down, bsp)
+	else:
+		
+		var b_down = transposeDown(bsp)
+		
+		if b_down[1] < 0:
+			return false
+		
+		return sameNotesRecc(asp, b_down)
+
 func _ready():
 	print("Loaded with level", global.level)
 
@@ -47,7 +98,8 @@ func checkNext(nn):
 	guitar.disconnect("note_played", self, "checkNext")
 	yield(get_tree().create_timer(1.5), "timeout")
 	
-	if nn == currentSong[currentNote + 1]:
+	if sameNotes(nn, currentSong[currentNote + 1]):
+		currentSong[currentNote + 1] = nn
 		scoreboard.addSuccess()
 		currentNote += 1
 		

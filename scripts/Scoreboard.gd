@@ -27,7 +27,7 @@ func addFail():
 	perf.visible = true
 	
 	fail.visible = true
-	print("F", score, rounds)
+
 
 func clearStatus():
 	fail.visible = false
@@ -44,4 +44,4 @@ func addSuccess():
 	perf.visible = true
 	
 	correct.visible = true
-	print("S", score, rounds)
+

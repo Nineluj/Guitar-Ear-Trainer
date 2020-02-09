@@ -84,13 +84,13 @@ position = Vector2( 464.578, 488.079 )
 texture = ExtResource( 6 )
 
 [node name="Instructions" type="Label" parent="Scoreboard"]
-margin_left = 171.74
-margin_top = 418.406
-margin_right = 551.74
-margin_bottom = 523.406
+margin_left = 170.384
+margin_top = 430.606
+margin_right = 550.384
+margin_bottom = 535.606
 custom_fonts/font = SubResource( 3 )
-text = "Press where the next
- note is on the 
+text = "Press  where  the  next
+note  is  on  the 
 fretboard"
 __meta__ = {
 "_edit_use_anchors_": false
