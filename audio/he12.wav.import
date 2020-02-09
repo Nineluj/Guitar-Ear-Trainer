@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/he12.wav-cb074cb2079af9ff40183064dd31c301.sample"
+
+[deps]
+
+source_file="res://audio/he12.wav"
+dest_files=[ "res://.import/he12.wav-cb074cb2079af9ff40183064dd31c301.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/he5.wav-6c52968a8934ed5c0f136bc342538f24.sample"
+
+[deps]
+
+source_file="res://audio/he5.wav"
+dest_files=[ "res://.import/he5.wav-6c52968a8934ed5c0f136bc342538f24.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
