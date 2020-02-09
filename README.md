@@ -2,6 +2,8 @@
 
 ## Context
 > This was my project for Hackbeanpot 2020. Screenshots and my text submission are included below.
+
+[Try it out](http://guitar-game.s3-website-us-east-1.amazonaws.com/) in your browser (Safari and iOS aren't supported at the moment, please use Firefox/Chrome)
 ![Thumbnail](screenshots/guitarthumbnail.png)
 
 
