@@ -1,22 +1,5 @@
 extends Sprite
 
-
-var song = ["g1", "g1", "g1", "g2", "g3", "g4", "g5"]
-
-var song2 = [
-	"g0", "g2", "g4", "g0", "", "g0", "g2", "g4", "g0", "g4", "g5", "g7", "g4",
-	"g5", "g7", "",
-	"b3", "b5", "b3", "b1", "b0", "g0", "b3", "b5", "b3", "b1", "b0", "g0",
-	"g0", "d0", "g0", "", "g0", "d0", "g0"
-]
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
-
-func playSong1():
-	playSong(song)
-
 func noteToPos(n: String):
 	var letter = ""
 	var fret = -1

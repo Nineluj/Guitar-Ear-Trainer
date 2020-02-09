@@ -1,4 +1,5 @@
 extends Button
 
 func _pressed():
-	get_tree().change_scene("res://scenes/level3.tscn")
+	global.level = 3
+	get_tree().change_scene("res://scenes/playScene.tscn")

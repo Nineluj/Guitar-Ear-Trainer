@@ -18,6 +18,10 @@ _global_script_class_icons={
 config/name="Guitar"
 run/main_scene="res://scenes/home.tscn"
 
+[autoload]
+
+global="*res://scripts/global.gd"
+
 [display]
 
 window/size/test_width=2048
