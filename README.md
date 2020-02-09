@@ -1,7 +1,7 @@
-# Guitar Ear Trainer
+# Guitar Ear Trainer - 🌱 Hackbeanpot 2020 Finalist
+
 ## Context
 > This was my project for Hackbeanpot 2020. Screenshots and my text submission are included below.
-
 ![Thumbnail](screenshots/guitarthumbnail.png)
 
 
