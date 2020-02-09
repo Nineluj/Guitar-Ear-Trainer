@@ -29,6 +29,10 @@ func addFail():
 	fail.visible = true
 	print("F", score, rounds)
 
+func clearStatus():
+	fail.visible = false
+	correct.visible = false
+
 func addSuccess():
 	scoreboardInit()
 	

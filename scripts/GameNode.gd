@@ -1,23 +1,37 @@
 extends Node2D
 
-var songs = [[
+var songs = [
+[],
+["E0", "E2", "E4", "E5", "E7"],
+[
 	"g0", "g2", "g4", "g0", "", "g0", "g2", "g4", "g0", "g4", "g5", "g7", "g4",
 	"g5", "g7", "",
 	"b3", "b5", "b3", "b1", "b0", "g0", "b3", "b5", "b3", "b1", "b0", "g0",
 	"g0", "d0", "g0", "", "g0", "d0", "g0"
-]]
+]
+]
 
 var currentNote = 0
 var currentSong = []
 var guitar = null
 var scoreboard = null
 
+var notesArr = ["E", "a", "d", "g", "b", "he"]
+
 func _ready():
 	print("Loaded with level", global.level)
 
 	scoreboard = get_node("Scoreboard")
 	guitar = get_node("GuitarInst/Area2D/CollisionShape2D/Guitar")
-	currentSong = songs[global.level - 1]
+	
+	if global.level > 0:
+		for n in songs[global.level]:
+			if n != "":
+				currentSong.append(n)
+	else:
+		for _i in range(10):
+			currentSong.append(notesArr[randi() % len(notesArr)]
+			+ str(randi() % 13))
 	
 	playRound()
 	
@@ -29,14 +43,15 @@ func playRound():
 	guitar.connect("note_played", self, "checkNext")
 
 func checkNext(nn):
+	scoreboard.clearStatus()
 	guitar.disconnect("note_played", self, "checkNext")
-	yield(get_tree().create_timer(2), "timeout")
+	yield(get_tree().create_timer(1.5), "timeout")
 	
 	if nn == currentSong[currentNote + 1]:
 		scoreboard.addSuccess()
 		currentNote += 1
 		
-		if currentNote == len(currentSong):
+		if currentNote == len(currentSong) - 1:
 			displayComplete()
 			return
 	
@@ -46,4 +61,5 @@ func checkNext(nn):
 	playRound()
 
 func displayComplete():
-	print("Do something now??")
+	get_node("EndScreen").visible = true
+	guitar.playSong(currentSong)
