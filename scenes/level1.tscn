@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://scenes/guitar.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Guitar.tscn" type="PackedScene" id=1]
 [ext_resource path="res://imgs/note2.png" type="Texture" id=3]
 [ext_resource path="res://scripts/goHome.gd" type="Script" id=4]
 
