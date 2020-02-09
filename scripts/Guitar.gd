@@ -10,13 +10,27 @@ var song = [
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	pass
+
+func playSong1():
 	playSong(song)
 
 func playSong(s):
 	for n in s:
 		if n != "":
-			playNote(n)
-		OS.delay_msec(500)
+			var nodePlaying = playNote(n)
+			nodePlaying.play()
+			yield(nodePlaying, "finished")
+			nodePlaying.queue_free()
+		else:
+			var t = Timer.new()
+			t.set_wait_time(0.3)
+			t.set_one_shot(true)
+			self.add_child(t)
+			t.start()
+			yield(t, "timeout")
+			t.queue_free()
+
 
 func playNote(note):
 	var sourceStream = load("res://audio/" + note + ".wav")
@@ -25,5 +39,5 @@ func playNote(note):
 	
 	add_child(audioPlayingNode)
 	audioPlayingNode.add_to_group("streams")
-	audioPlayingNode.play()
 	
+	return audioPlayingNode
