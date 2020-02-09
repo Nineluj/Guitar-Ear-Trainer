@@ -1,5 +1,7 @@
 extends Sprite
 
+signal note_played
+
 func noteToPos(n: String):
 	var letter = ""
 	var fret = -1
@@ -10,8 +12,7 @@ func noteToPos(n: String):
 	else:
 		letter = n.left(1)
 		fret = int(n.right(1))
-			
-	print(">>", letter, str(fret))
+	
 
 	var x = 0
 	var y = 0
@@ -125,6 +126,8 @@ func noteSelected(pos_tuple):
 		fret = 15
 	else:
 		fret = 0
+		
+	emit_signal("note_played", letter + str(fret))
 	
 	return letter + str(fret)
 
@@ -144,6 +147,16 @@ func playSong(s):
 			yield(t, "timeout")
 			t.queue_free()
 
+func playNoteNoShow(note):
+	var sourceStream = load("res://audio/" + note + ".wav")
+	var audioPlayingNode = AudioStreamPlayer.new()
+	audioPlayingNode.set_stream(sourceStream)
+	
+	add_child(audioPlayingNode)
+	audioPlayingNode.add_to_group("streams")
+	audioPlayingNode.play()
+	
+	return audioPlayingNode
 
 func playNote(note):
 	var sourceStream = load("res://audio/" + note + ".wav")

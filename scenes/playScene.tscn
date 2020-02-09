@@ -71,12 +71,12 @@ __meta__ = {
 
 [node name="correct" type="Sprite" parent="Scoreboard"]
 visible = false
-position = Vector2( 407.968, 474.031 )
+position = Vector2( 432.488, 465.177 )
 texture = ExtResource( 8 )
 
 [node name="fail" type="Sprite" parent="Scoreboard"]
 visible = false
-position = Vector2( 405.924, 475.393 )
+position = Vector2( 433.85, 464.496 )
 texture = ExtResource( 6 )
 
 [node name="Instructions" type="Label" parent="Scoreboard"]
