@@ -2,7 +2,7 @@
 ## Context
 > This was my project for Hackbeanpot 2020. Screenshots and my text submission are included below.
 
-[screenshots/guitarthumbnail.png]
+![Thumbnail](screenshots/guitarthumbnail.png)
 
 
 ## Inspiration
@@ -18,6 +18,6 @@ I drew the art for the project, spending most of my time there getting the guita
 Scale practice, more songs and different guitar sounds!
 
 ## Screenshots
-[screenshots/guitarGame.png]
-[screenshots/guitarScreenshot.png]
-[screenshots/guitarSuccess.png]
+![Main](screenshots/guitarGame.png)
+![In-game](screenshots/guitarScreenshot.png)
+![Success](screenshots/guitarSuccess.png)
