@@ -1,4 +1,4 @@
-# Guitar Ear Trainer - 🌱 Hackbeanpot 2020 Finalist
+# Guitar Ear Trainer - 🌱 [Hackbeanpot 2020 Finalist](https://medium.com/@HackBeanpot/hacker-highlight-guitar-ear-trainer-fae9ad3924e6)
 
 ## Context
 > This was my project for Hackbeanpot 2020. Screenshots and my text submission are included below.
